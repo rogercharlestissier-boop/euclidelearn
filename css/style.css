@@ -194,9 +194,26 @@ nav a:hover, nav a[aria-current="page"] { text-decoration: underline; }
   object-fit: contain;
 }
 .slideshow img.is-on { display: block; }
-.slideshow-portrait {
-  max-width: 300px;
+.slideshow-portrait,
+.phone-slides {
+  position: relative;
+  width: min(260px, 78vw);
+  max-width: 260px;
+  margin: 0 auto;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: #111;
+  aspect-ratio: auto;
 }
+.phone-slides img {
+  display: none;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  position: static;
+}
+.phone-slides img.is-on { display: block; }
 .slide-nav {
   position: absolute;
   bottom: 12px;
@@ -265,14 +282,20 @@ nav a:hover, nav a[aria-current="page"] { text-decoration: underline; }
   border-radius: 999px;
   margin-bottom: 8px;
 }
-.world-visual {
+.world-pic {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 16px;
+}
+.world-pic img,
+.world-art {
   display: block;
-  width: auto;
-  max-width: min(100%, 280px);
+  width: 200px;
+  max-width: 70vw;
   height: auto;
   object-fit: contain;
+  object-position: center;
   border-radius: 16px;
-  margin: 0 auto 16px;
 }
 .world .lore { font-size: 1.05rem; }
 .minigame {
