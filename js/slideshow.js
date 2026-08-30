@@ -11,6 +11,7 @@
     slides.forEach(function (img, k) {
       img.classList.toggle("is-on", k === i);
     });
+    root.classList.toggle("is-tall", slides[i].getAttribute("data-orient") === "portrait");
     if (dotsWrap) {
       Array.prototype.forEach.call(dotsWrap.children, function (b, k) {
         b.classList.toggle("is-on", k === i);
