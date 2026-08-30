@@ -20,7 +20,8 @@ Lien TestFlight (provisoire) : `https://testflight.apple.com/join/ABBWX98b`
 2. Source : branche `main`, dossier `/` (root)
 3. Le fichier `CNAME` pointe déjà vers `euclidelearn.fr`
 
-URL GitHub le temps du DNS : `https://<compte>.github.io/<repo>/`
+Repo prévu : [github.com/rogercharlestissier-boop/euclidelearn](https://github.com/rogercharlestissier-boop/euclidelearn)  
+URL GitHub le temps du DNS : `https://rogercharlestissier-boop.github.io/euclidelearn/`
 
 ## DNS OVH (domaine euclidelearn.fr)
 
