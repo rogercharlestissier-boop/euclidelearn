@@ -7,9 +7,22 @@ Site public d’**Euclide !** (application iPhone de maths collège).
 | Fichier | Rôle |
 |---------|------|
 | `index.html` | Portail (app vs cours à domicile) |
-| `accueil.html` | App + TestFlight + diaporama |
+| `accueil.html` | App + TestFlight + diaporamas |
 | `mondes.html` | Détail CM → 3e |
 | `cgu.html` | CGU & confidentialité |
+| `assistance.html` | Aide / URL d’assistance App Store |
+
+## App Store Connect (tant que le DNS n’est pas prêt)
+
+Base : `https://rogercharlestissier-boop.github.io/euclidelearn/`
+
+| Champ Apple | URL |
+|-------------|-----|
+| URL marketing | `…/accueil.html` |
+| Politique de confidentialité | `…/cgu.html` |
+| URL d’assistance | `…/assistance.html` |
+
+Quand `euclidelearn.fr` répond en HTTPS, remplacer la base par `https://euclidelearn.fr/` (mêmes fichiers).
 
 Lien TestFlight (provisoire) : `https://testflight.apple.com/join/ABBWX98b`  
 À remplacer par l’URL App Store dans `accueil.html` une fois l’app validée.
