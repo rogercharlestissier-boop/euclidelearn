@@ -19,7 +19,7 @@ Base : `https://rogercharlestissier-boop.github.io/euclidelearn/`
 | Champ Apple | URL |
 |-------------|-----|
 | URL marketing | `…/accueil.html` |
-| Politique de confidentialité | `…/cgu.html` |
+| Politique de confidentialité | `https://euclidelearn.fr/cgu.html` |
 | URL d’assistance | `…/assistance.html` |
 
 Quand `euclidelearn.fr` répond en HTTPS, remplacer la base par `https://euclidelearn.fr/` (mêmes fichiers).
