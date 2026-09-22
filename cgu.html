@@ -97,7 +97,7 @@
       <p>Éditeur de l’Application Euclide!™ — contact : <strong><a href="mailto:euclide.app@gmail.com">euclide.app@gmail.com</a></strong>.</p>
       <h3>5.2 Données collectées</h3>
       <ul>
-        <li><strong>Adresse e-mail</strong> : via Firebase Authentication (Sign in with Apple ; e-mail relais Apple possible si masquage activé).</li>
+        <li><strong>Adresse e-mail</strong> : via Firebase Authentication, selon le mode de connexion choisi (e-mail et mot de passe, Sign in with Apple ou Google ; e-mail relais Apple possible si masquage activé). Le mot de passe, le cas échéant, est stocké de façon hachée par Firebase ; l’éditeur ne le conserve pas et ne peut pas le lire.</li>
         <li><strong>Pseudo</strong> : choisi à l’inscription, stocké dans Firestore pour le profil.</li>
         <li><strong>Données de progression / jeu</strong> : ceintures, scores, préférences, liés au compte (Firestore).</li>
         <li><strong>Achats / abonnement</strong> : gérés via Apple (App Store) et RevenueCat (statut premium).</li>
@@ -105,7 +105,8 @@
       <p><strong>Non collectés :</strong> nom civil, âge, localisation précise, publicité ciblée. L’Application n’utilise <strong>pas</strong> Firebase Crashlytics ni Firebase Analytics.</p>
       <h3>5.3 Finalités et bases légales</h3>
       <ul>
-        <li>gestion et authentification du compte ;</li>
+        <li>gestion et authentification du compte (y compris création, connexion et déconnexion) ;</li>
+        <li>envoi d’e-mails techniques par Firebase (réinitialisation du mot de passe) ;</li>
         <li>affichage du pseudo et de la progression dans l’Application ;</li>
         <li>amélioration technique, sécurité et maintenance.</li>
       </ul>
@@ -118,7 +119,7 @@
       </ul>
       <h3>5.5 Sécurité</h3>
       <p>Mesures techniques et organisationnelles appropriées (chiffrement, accès restreint). Firebase applique des standards élevés (ISO 27001, SOC, conformité RGPD).</p>
-      <p>L’authentification joueur sur iOS repose sur <strong>Sign in with Apple</strong> et une session Firebase sécurisée. Aucun mot de passe n’est demandé ni stocké sur l’appareil.</p>
+      <p>L’utilisateur (ou le titulaire de l’autorité parentale) peut créer et ouvrir un compte par <strong>e-mail et mot de passe</strong> (Firebase Authentication), <strong>Sign in with Apple</strong> ou <strong>Google</strong>. Une session Firebase sécurisée est alors établie. Un e-mail de <strong>réinitialisation du mot de passe</strong> peut être envoyé par Firebase à l’adresse indiquée. Pour un mineur, l’adresse e-mail utilisée doit être celle d’un parent ou tuteur, ou utilisée avec son accord. Le mot de passe n’est pas stocké dans l’Application.</p>
       <h3>5.6 Durée de conservation</h3>
       <p>Données conservées <strong>tant que le compte est actif</strong>. Après suppression du compte : effacement définitif sous <strong>30 jours</strong> (sauf obligations légales de conservation).</p>
       <h3>5.7 Vos droits RGPD</h3>
@@ -151,6 +152,9 @@
         <li>abonnement <strong>mensuel</strong> ;</li>
         <li>abonnement <strong>annuel</strong> (avantages promotionnels éventuellement indiqués à l’achat, ex. skins ou Euclide Coins).</li>
       </ul>
+      <p>Une <strong>offre d’introduction</strong> peut être proposée sur l’abonnement <strong>mensuel</strong> (durée et disponibilité indiquées dans l’App Store, par exemple 7 jours gratuits). Elle est réservée aux <strong>nouveaux abonnés</strong> n’ayant jamais souscrit à cet abonnement auprès d’Apple. À l’issue de la période d’essai, l’abonnement se poursuit au <strong>tarif mensuel en vigueur</strong> et <strong>se renouvelle automatiquement</strong>, sauf résiliation au moins <strong>24 heures</strong> avant la fin de la période en cours, dans les réglages du compte Apple. L’offre n’est pas cumulable, peut être limitée dans le temps, et n’est pas due si l’utilisateur a déjà bénéficié d’une offre d’introduction sur le même groupe d’abonnements.</p>
+      <h4>Essai Premium (durée limitée)</h4>
+      <p>Du <strong>28 septembre 2026 au 4 octobre 2026</strong>, les <strong>nouveaux abonnés</strong> à l’abonnement <strong>mensuel</strong> (App Store) peuvent bénéficier de <strong>7 jours d’accès Premium gratuits</strong>. Ensuite, l’abonnement se poursuit au tarif mensuel et se renouvelle automatiquement, sauf résiliation au moins 24&nbsp;h avant la fin de l’essai, dans les réglages Apple. Offre indiquée dans l’App Store, non cumulable, une seule fois par compte Apple.</p>
       <p>Gestion et résiliation via les <strong>achats intégrés</strong> de l’App Store ou de Google Play, selon la plateforme. Aucune publicité dans l’Application.</p>
 
       <h3>6.2 Acceptation des conditions</h3>
@@ -162,7 +166,7 @@
       <h3>6.5 Modération des pseudos et comportement</h3>
       <p>Les pseudos doivent être respectueux. Un filtre automatique rejette les termes inappropriés. En cas de manquements répétés, l’éditeur peut suspendre ou supprimer le compte.</p>
       <h3>6.6 Exigences techniques et responsabilité</h3>
-      <p>Une connexion internet stable est requise. L’Application est fournie « <strong>en l’état</strong> ». L’éditeur décline sa responsabilité en cas de dysfonctionnements liés à l’appareil, la connexion ou aux services tiers (Firebase, Apple Sign-In, stores). Sa responsabilité est limitée aux dommages directs et prévisibles, dans les limites de la loi.</p>
+      <p>Une connexion internet stable est requise. L’Application est fournie « <strong>en l’état</strong> ». L’éditeur décline sa responsabilité en cas de dysfonctionnements liés à l’appareil, la connexion ou aux services tiers (Firebase Authentication y compris e-mail/mot de passe, Apple Sign-In, Google Sign-In, stores). Sa responsabilité est limitée aux dommages directs et prévisibles, dans les limites de la loi.</p>
       <h3>6.7 Suppression du compte</h3>
       <p>Suppression possible à tout moment dans les paramètres de l’Application. Les données sont effacées conformément à la politique de confidentialité.</p>
       <p><strong>Important :</strong> la suppression du compte <strong>ne résilie pas</strong> automatiquement l’abonnement. Pour arrêter les facturations, annulez l’abonnement <strong>séparément</strong> dans les réglages App Store / Google Play.</p>
@@ -265,7 +269,7 @@
       </ul>
       <p>Développé par © 2025-2026 Euclide!™ — <a href="mailto:euclide.app@gmail.com">euclide.app@gmail.com</a></p>
 
-      <p><em>Dernière mise à jour du texte in-app : 31 août 2026. Mise en ligne de cette page : 31 août 2026.</em></p>
+      <p><em>Dernière mise à jour : 22 septembre 2026.</em></p>
     </article>
   </main>
   <footer>
